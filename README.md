@@ -2,14 +2,24 @@
 
 Challenge prompt:
 
-> Durante toda a Maratona utilizaremos containers como base de desenvolvimento bem como para produção. Logo, ter uma noção básica de Docker é mais do que necessário.
 
-> Nesse desafio, você terá de criar uma imagem docker que quando executada deverá expor a porta 8080 exibindo a mensagem: Eu sou Full Cycle.
+>Neste desafio você deverá criar uma API Rest com o Nest.js.
+> Devemos criar um recurso de categorias com a URI categories com dois endpoints:
 
-> Fique na liberdade para utilizar a tecnologia/linguagem de programação de sua escolha. Exemplo: você poderá criar uma simples aplicação usando Node.js com Express para exibir essa mensagem.
-> Gere o build da sua imagem, faça o push para o DockerHub e a informe no formulário abaixo.
+  - GET categories -> Consulta de categorias
+  - POST categories -> Criação de categorias
 
-Found [here](http://maratona.fullcycle.com.br/desafios/hello-world-com-docker/).
+>A aplicação terá um banco de dados SQLite para armazenar os dados, este banco ficará na raiz do projeto e usará o TypeORM para persistência dos dados.
+>O banco SQLite deverá estar no controle de versão da aplicação e deverá ter 10 categorias cadastradas.
+>Utilize o TypeORM, que é uma biblioteca Node.js para administrar a persitência de dados em banco de dados através do conceito de ORM (Object Relation Mapper).
+>A aplicação deverá rodar com Docker.
+>>Dica: Veja a aula abaixo sobre API Rest Nest.js para saber como configurar o Nest.js com Docker e usar o TypeORM com banco de dados. Há um repositório Git na descrição do vídeo com um exemplo de API Rest com Nest.js usando Docker e TypeORM.
+https://www.youtube.com/watch?v=BT7novtdAgI
+
+>NÃO use docker-compose nesta aplicação, deveremos ter apenas um Dockerfile na raiz do projeto expondo a porta 3000, que é a porta que o servidor do Nest.js para rodar a aplicação web.
+Faça o docker build da aplicação para gerar sua imagem, suba-a no Docker Hub e compartilhe o endereço da imagem logo abaixo. 
+
+Found [here](http://maratona.fullcycle.com.br/desafios/trabalhando-com-nestjs/).
 
 ## Installation
 
